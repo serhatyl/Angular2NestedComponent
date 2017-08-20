@@ -1,9 +1,18 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <img src='{{imagePath}}'/>
+  <img src='{{imagePath}}'/><!--Interpolation-->
   <h1>
     {{'Page Header = '+pageHeader}}!
   </h1>
-  <b>{{getFullName()}}</b>
+  <b>{{getFullName()}}</b><br>
+  <button [disabled]='btnIsDisabled'>Click</button><!--Property binding-->
+  <!--
+    **Teoride interpolation ile aynı işe yarar ancak bir elemente değer atayacaksak property binding kullanmalıyız
+    **Property bindingde propertyi square brackets içine almamız gerekir aksi takdirde property olarak algılamaz
+    **Square brackets kullanmak istemiyorsanız canonical form yöntemi ile ilerleyebilirsiniz (14.satır)
+  -->
+  <span bind-innerHtml='pageHeader'></span><!--cannonical form yöntemi-->
+  <!--Angular ayrıca veriyi bind etmeden önce kötü amaçlı olup olmadığını kontrol eder bkz.16.Satır-->
+  <div [innerHtml]='badQuery'></div>
   <app-employee></app-employee>
 </div>
