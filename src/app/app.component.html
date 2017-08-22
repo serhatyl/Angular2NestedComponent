@@ -18,5 +18,12 @@
   <button class="colorClass">Colored Button</button><br><br>
   <button [class]='buttonClassToApply'>Multiple Styled Button</button><br><br>
   <button class="colorClass" [class.boldClass]='applyBoldClass'>Çift style</button><br><br>
-  <button class="colorClass" [ngClass]='addClasses()'>Function Class</button>
+  <button class="colorClass" [ngClass]='addClasses()'>Function Class</button><br><br>
+  <!--Style Binding-->
+  <button style='color:red' [style.font-weight]="applyBoldClass ? 'bold': 'normal' ">Style Bind Ettik</button>
+  <br><br>
+  <button style='color:red' [style.font-size.px]="fontSize">font size bind</button>
+  <br><br>
+  <!--ngStyle-->
+  <button [ngStyle]="addStyles()">ngStyle</button>
 </div>
