@@ -11,11 +11,22 @@ export class AppComponent {
   firstName = 'Serhat';
   lastName = 'Yılmaz';
   btnIsDisabled = true;
+  applyBoldClass = true;
+  buttonClassToApply = 'italicClass boldClass';
 
   badQuery = '<script>Hacked by Serhat</script>';
 
   getFullName() {
     return this.firstName + ' ' + this.lastName;
+  }
+
+  addClasses() {
+    let classes = {
+      boldClass : true,
+      italicClass : false
+    };
+
+    return classes;
   }
 
 }

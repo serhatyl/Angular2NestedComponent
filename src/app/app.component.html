@@ -14,5 +14,9 @@
   <span bind-innerHtml='pageHeader'></span><!--cannonical form yöntemi-->
   <!--Angular ayrıca veriyi bind etmeden önce kötü amaçlı olup olmadığını kontrol eder bkz.16.Satır-->
   <div [innerHtml]='badQuery'></div>
-  <app-employee></app-employee>
+  <app-employee></app-employee><br>
+  <button class="colorClass">Colored Button</button><br><br>
+  <button [class]='buttonClassToApply'>Multiple Styled Button</button><br><br>
+  <button class="colorClass" [class.boldClass]='applyBoldClass'>Çift style</button><br><br>
+  <button class="colorClass" [ngClass]='addClasses()'>Function Class</button>
 </div>
