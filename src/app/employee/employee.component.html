@@ -15,14 +15,18 @@
             <td>{{lastname}}</td>
         </tr>
 
-        <tr>
+        <tr *ngIf='showDetails'>
             <td>Gender</td>
             <td>{{gender}}</td>
         </tr>
 
-        <tr>
+        <tr *ngIf='showDetails'>
             <td>Age</td>
             <td>{{age}}</td>
         </tr>
     </tbody>
-</table>
+</table><br>
+  <!--14 Event Binding Komplex Deneme-->
+  <button (click)="toggleDetails()">{{showDetails? 'Hide' : 'Show'}} Details</button>
+  <br>
+  <!--***************-->

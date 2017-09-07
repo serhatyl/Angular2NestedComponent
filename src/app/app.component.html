@@ -25,5 +25,9 @@
   <button style='color:red' [style.font-size.px]="fontSize">font size bind</button>
   <br><br>
   <!--ngStyle-->
-  <button [ngStyle]="addStyles()">ngStyle</button>
+  <button [ngStyle]="addStyles()">ngStyle</button><br>
+  <!--14 Event Binding-->
+  <button (click)='onClick()'>Event Binding Button</button>
+  <!--14 Event Binidng diğer yöntem-->
+  <button on-click='onClick()'>Event Binding Button</button>
 </div>

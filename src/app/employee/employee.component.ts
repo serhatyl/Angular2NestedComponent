@@ -11,4 +11,11 @@ export class EmployeeComponent {
   lastname = 'Jerry';
   gender = 'Male';
   age = 20;
+  showDetails = false;
+
+
+  toggleDetails(): void {
+    this.showDetails = !this.showDetails;
+    console.log(this.showDetails);
+  }
 }

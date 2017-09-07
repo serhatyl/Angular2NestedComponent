@@ -16,8 +16,14 @@ export class AppComponent {
   btnIsDisabled = true;
   applyBoldClass = true;
   buttonClassToApply = 'italicClass boldClass';
+  showDetails = true;
 
   badQuery = '<script>Hacked by Serhat</script>';
+
+  onClick(): void {
+    console.log('Event Binding Button Clicked');
+    alert('Event Binding Button Clicked');
+  }
 
   getFullName() {
     return this.firstName + ' ' + this.lastName;
