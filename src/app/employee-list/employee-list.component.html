@@ -1,0 +1,18 @@
+<!--ngFor Kullanımı-->
+<table>
+  <thead>
+    <tr>
+      <th>Ad</th>
+      <th>Soyad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let calisan of employees">
+      <td>{{calisan.name}}</td>
+      <td>{{calisan.surname}}</td>
+    </tr>
+    <tr *ngIf="!employees || employees.length==0">
+      <td colspan="5">No employees to display</td>
+    </tr>
+  </tbody>
+</table>
