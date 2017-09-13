@@ -2,24 +2,20 @@
 <table>
   <thead>
     <tr>
+      <th>Index Number</th>
       <th>Ad</th>
       <th>Soyad</th>
-      <th>Index Number</th>
-      <th>IsFirst</th>
-      <th>IsLast</th>
-      <th>IsEven</th>
-      <th>IsOdd</th>
+      <th>BirthDate</th>
+      <th>Salary</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let calisan of employees; trackBy: trackByEmpCode; let i = index;let isFirst=first; let isLast=last;let isEven = even;let isOdd = odd;">
-      <td>{{calisan.name}}</td>
-      <td>{{calisan.surname}}</td>
+    <tr *ngFor="let calisan of employees; trackBy: trackByEmpCode; let i = index;">
       <td>{{i}}</td>
-      <td>{{isFirst}}</td>
-      <td>{{isLast}}</td>
-      <td>{{isEven}}</td>
-      <td>{{isOdd}}</td>
+      <td>{{calisan.name | uppercase}}</td>
+      <td>{{calisan.surname}}</td>
+      <td>{{calisan.birthDate | date: 'dd/MM/y'}}</td>
+      <td>{{calisan.sallary | currency: 'USD':true}}</td>
     </tr>
     <tr *ngIf="!employees || employees.length==0">
       <td colspan="5">No employees to display</td>

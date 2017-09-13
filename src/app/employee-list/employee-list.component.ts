@@ -9,12 +9,18 @@ export class EmployeeListComponent implements OnInit {
 
   employees: any[] = [
     {
+      code: 1,
       name: 'Serhat',
-      surname: 'Yılmaz'
+      surname: 'Yılmaz',
+      birthDate: '3/12/2016',
+      sallary: 2300
     },
     {
+      code: 2,
       name: 'Steve',
-      surname: 'Jobs'
+      surname: 'Jobs',
+      birthDate: '1/6/2016',
+      sallary: 1500
     }
   ];
 
@@ -25,22 +31,30 @@ export class EmployeeListComponent implements OnInit {
       {
         code: 1,
         name: 'Serhat',
-        surname: 'Yılmaz'
+        surname: 'Yılmaz',
+        birthDate: '3/12/2016',
+        sallary: 2300
       },
       {
         code: 2,
         name: 'Steve',
-        surname: 'Jobs'
+        surname: 'Jobs',
+        birthDate: '1/6/2016',
+        sallary: 1500
       },
       {
         code: 3,
         name: 'Steve',
-        surname: 'Woz'
+        surname: 'Woz',
+        birthDate: '3/3/2016',
+        sallary: 1600
       },
       {
         code: 4,
         name: 'Steve',
-        surname: 'Woz'
+        surname: 'Woz',
+        birthDate: '2/2/2016',
+        sallary: 4000
       }
     ];
   }
